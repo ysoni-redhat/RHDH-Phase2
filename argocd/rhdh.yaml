@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: rhdh
-    repoURL: https://github.com/ysoni-redhat/RHDH-Module2.git
+    repoURL: https://github.com/ysoni-redhat/RHDH-Phase2.git
     targetRevision: main
   syncPolicy:
     automated:
