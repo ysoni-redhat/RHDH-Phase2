@@ -18,12 +18,13 @@ spec:
         - name: NODE_TLS_REJECT_UNAUTHORIZED
           value: "0"
       secrets:
-        - name: rhdh-secrets            
+        - name: rhdh-secrets
     replicas: 1
     route:
       enabled: true
       host: rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io
       subdomain: apps.cluster-qr8h2.dynamic.redhatworkshops.io
+    podTemplate:
+      automountServiceAccountToken: true
   database:
     enableLocalDb: true
-...
