@@ -24,7 +24,5 @@ spec:
       enabled: true
       host: rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io
       subdomain: apps.cluster-qr8h2.dynamic.redhatworkshops.io
-    podTemplate:
-      automountServiceAccountToken: true
   database:
     enableLocalDb: true
