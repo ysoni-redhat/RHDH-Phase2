@@ -1,0 +1,29 @@
+---
+apiVersion: rhdh.redhat.com/v1alpha3
+kind: Backstage
+metadata:
+  name: developer-hub
+  namespace: demo-project
+  labels:
+    app.kubernetes.io/name: backstage
+spec:
+  application:
+    appConfig:
+      configMaps:
+        - name: app-config-rhdh
+      mountPath: /opt/app-root/src
+    dynamicPluginsConfigMapName: dynamic-plugins-rhdh
+    extraEnvs:
+      envs:
+        - name: NODE_TLS_REJECT_UNAUTHORIZED
+          value: "0"
+      secrets:
+        - name: rhdh-secrets            
+    replicas: 1
+    route:
+      enabled: true
+      host: rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io
+      subdomain: apps.cluster-g7q2m.dynamic.redhatworkshops.io
+  database:
+    enableLocalDb: true
+...

@@ -1,0 +1,48 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: KeycloakRealmImport
+metadata:
+  name: rhdh-realm
+  namespace: demo-project
+spec:
+  keycloakCRName: demo-keycloak-instance
+  realm:
+    id: rhdh
+    realm: rhdh
+    displayName: "RHDH Realm"
+    enabled: true
+    browserFlow: browser
+    identityProviders:
+      - alias: github
+        displayName: "GitHub"
+        providerId: github
+        enabled: true
+        trustEmail: true
+        storeToken: false
+        addReadTokenRoleOnCreate: false
+        authenticateByDefault: false
+        linkOnly: false
+        firstBrokerLoginFlowAlias: first broker login
+        config:
+          clientId: "Ov23li8pA4hii34meCr5"
+          clientSecret: "3b11837a8eff58114e88953c1d847341ee00611a"
+          defaultScope: "user:email"
+    clients:
+      - clientId: rhdh
+        name: rhdh
+        description: Red Hat Developer Hub Client
+        enabled: true
+        protocol: openid-connect
+        publicClient: false
+        redirectUris:
+          - "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io/api/auth/*"
+        rootUrl: "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io"
+        adminUrl: "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io"
+        baseUrl: "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io"
+        webOrigins:
+          - "+"
+        secret: "developer-hub-secret"  # Leave empty — Keycloak will auto-generate or set it after creation
+        standardFlowEnabled: true
+        implicitFlowEnabled: false
+        directAccessGrantsEnabled: false
+        serviceAccountsEnabled: false
+        authorizationServicesEnabled: false
