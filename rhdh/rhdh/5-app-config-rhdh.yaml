@@ -9,7 +9,14 @@ data:
     app:
       title: Red Hat Developer Hub
       baseUrl: https://rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io
-
+    kubernetes:
+      clusterLocatorMethods:
+        - type: config
+          clusters:
+            - name: openshift-cluster
+              url: https://kubernetes.default.svc
+              authProvider: serviceAccount
+              skipTLSVerify: true
     backend:
       auth:
         keys:
