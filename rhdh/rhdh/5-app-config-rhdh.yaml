@@ -10,6 +10,8 @@ data:
       title: Red Hat Developer Hub
       baseUrl: https://rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io
     kubernetes:
+      serviceLocatorMethod:
+        type: 'multiTenant'  
       clusterLocatorMethods:
         - type: config
           clusters:
@@ -17,6 +19,17 @@ data:
               url: https://api.cluster-qr8h2.dynamic.redhatworkshops.io:6443
               authProvider: serviceAccount
               skipTLSVerify: true
+              serviceAccountToken: ${K8S_SA_TOKEN}
+              customResources:
+                - group: 'route.openshift.io'
+                  apiVersion: 'v1'
+                  plural: 'routes'
+                - group: 'tekton.dev'
+                  apiVersion: 'v1'
+                  plural: 'pipelineruns'
+                - group: 'tekton.dev'
+                  apiVersion: 'v1'
+                  plural: 'taskruns'
     backend:
       auth:
         keys:
