@@ -34,10 +34,10 @@ spec:
         protocol: openid-connect
         publicClient: false
         redirectUris:
-          - "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io/api/auth/*"
-        rootUrl: "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io"
-        adminUrl: "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io"
-        baseUrl: "https://rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io"
+          - "https://rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io/api/auth/*"
+        rootUrl: "https://rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io"
+        adminUrl: "https://rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io"
+        baseUrl: "https://rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io"
         webOrigins:
           - "+"
         secret: "developer-hub-secret"  # Leave empty — Keycloak will auto-generate or set it after creation

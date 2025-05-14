@@ -22,8 +22,8 @@ spec:
     replicas: 1
     route:
       enabled: true
-      host: rhdh.apps.cluster-g7q2m.dynamic.redhatworkshops.io
-      subdomain: apps.cluster-g7q2m.dynamic.redhatworkshops.io
+      host: rhdh.apps.cluster-qr8h2.dynamic.redhatworkshops.io
+      subdomain: apps.cluster-qr8h2.dynamic.redhatworkshops.io
   database:
     enableLocalDb: true
 ...
