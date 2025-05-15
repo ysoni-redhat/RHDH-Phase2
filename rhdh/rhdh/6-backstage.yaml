@@ -19,7 +19,6 @@ spec:
           value: "0"
       secrets:
         - name: rhdh-secrets
-        - name: rhdh-k8s-sa-token
     replicas: 1
     route:
       enabled: true
