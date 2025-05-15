@@ -5,8 +5,8 @@ resources:
   - rhdh/1-namespace.yaml
   - rhdh/2-OperatorGroup.yaml
   - rhdh/3-Subscription.yaml
+  - rhdh/3-5-ServiceAccount.yaml
   - rhdh/4-Secret.yaml
-  - rhdh/7-serviceaccount.yaml
   - rhdh/5-app-config-rhdh.yaml
   - rhdh/5-dynamic-plugins.yaml
   - rhdh/6-backstage.yaml
