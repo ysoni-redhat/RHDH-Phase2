@@ -8,6 +8,8 @@ metadata:
     app.kubernetes.io/name: backstage
 spec:
   application:
+    serviceAccountName: rhdh-k8s-sa
+    automountServiceAccountToken: true
     appConfig:
       configMaps:
         - name: app-config-rhdh
