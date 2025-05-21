@@ -40,6 +40,8 @@ data:
       reading:
         allow:
           - host: raw.githubusercontent.com
+          - host: springboot-route-demo-project.apps.cluster-qr8h2.dynamic.redhatworkshops.io
+          - host: api.apis.guru
 
       # GitHub token support for backend operations (used by scaffolder)
       integrations:
